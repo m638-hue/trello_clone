@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello Clone</title>
+    <link rel="stylesheet" href="trello.css">
+</head>
+<body onload="displayLocalStorage()">
+    <div class="listContainer">
+        <div class="addList list">
+            <p class="listTitle add"><b class="add">Add list +</b></p>            
+        </div>
+    </div>
+    
+    <div class="popUpBack">
+        <div class="editCard" onclick="event.stopPropagation()">
+            <div class="editCardTitle">
+                <input type="text">
+                <div class="cardX"><i class="fas fa-trash"></i></div>
+            </div>
+
+            <div class = "edits">
+                <h2>Labels</h2>
+                <div class="labelContainer">                    
+                    <div class="addLabel"><i class="fas fa-plus" style = "font-size: 1rem; color: #979797;"></i></div>
+                </div>
+                
+                <div style="margin-bottom: 5%;">
+                    <h2 style="margin: 0;">Due date</h2>
+                    <div class="from"></div>
+                    <div id="check"><i class="fas fa-check"></i></div>
+                </div>
+                <input type="date" name="" id="" onchange="checkValidDate(this)">
+                <input type="time" name="" id="" onchange="checkValidDate(document.querySelector('input[type = date]'))">
+
+                <div class="remDate">Remove date</div>
+            </div>
+        </div>
+        
+        <div class="labelEdit" onclick="event.stopPropagation()">
+            <h3>Labels</h3>
+            <div class="userLabelContainer">
+                <div class="addUserLabel userLabel">Create label</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/0999e96faa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="moment.js"></script>
+    <script src = "trello.js"></script>
+</body>
+</html>
+
+<!--
+    ADD FORM
+    <div class="addingCard">
+        <div class="card addCardForm">
+            <input type="text" placeholder="Type a title">
+        </div>
+
+        <div style = "display: flex;">
+            <div class="addButton card">Add</div>
+            <div class="cancelCard card">Cancel</div>
+        </div>
+    </div>
+-->
+
+<!--
+    CARD
+    <div class="card">
+        <div class="colors">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+        </div>
+
+        <p class="cardTitle">Carta multi</p>
+        <div class="due">23. de sep.</div>
+    </div>
+-->
+
+<!--
+    LIST
+    <div class="list">
+        <p class = "listTitle"><b>To do:</b></p>
+            
+        <div class="card">
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <p class="cardTitle">Carta multi</p>
+            <div class="due">23. de sep.</div>
+        </div>            
+
+        <div class="addCard add">Add card +</div>
+    </div>
+-->
